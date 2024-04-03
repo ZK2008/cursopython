@@ -1,0 +1,23 @@
+import qrcode
+
+def gerarqrcode (x):
+    img = qrcode.make(x)
+    img.save("eduardo.png")
+
+def link():
+    img = qrcode.make("https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa09UTXFCRi1TaldKZGI5V1BOYjFueDJZNW84d3xBQ3Jtc0ttSHp5X3FQRUtFbGd4d1d5aUktWGRRYXM0VFhHMGttX3FNLURIVzk2STAwaUZlVEhmZXhvTGpOT1dweWYwcnc5b21pMl9VNTUwNkkwb1FKWFpTM1dtRDZzMUxDU0VjMVBUUVZfbTJnamFRZUtxQUNTOA&q=https%3A%2F%2Fumusicbrazil.lnk.to%2FPaggodin&v=esEFaigUuWc")
+    img.save("link.png")
+
+def receberdados ():
+    nome= input("digite seu nome:")
+    end= input("digite meu endereço:")
+    telefone= input("digite seu telefone:")
+    mensagem= input("digite sua mensagem:")
+    
+    a = "nome = " + nome + "\n end =" + end + "\n telefone =" + telefone + "\n mensagem = " + mensagem
+    return a
+
+if __name__=="__main__":
+    m = receberdados()
+    gerarqrcode (m)
+    link()
